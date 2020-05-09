@@ -24,14 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AnhXa();
-        CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+        final CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 skOne.setProgress(skOne.getProgress() + getRandom(10));
                 skTwo.setProgress(skTwo.getProgress() + getRandom(10));
                 skThree.setProgress(skThree.getProgress() + getRandom(10));
             }
-
             @Override
             public void onFinish() {
                 if (skOne.getProgress() >= 100) {
@@ -47,7 +46,14 @@ public class MainActivity extends AppCompatActivity {
                this.start();
             }
         };
-        countDownTimer.start();
+
+        ibtnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countDownTimer.start();
+            }
+        });
+
     }
     private int getRandom(int bound) {
         return new Random().nextInt(bound);
