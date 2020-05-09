@@ -98,9 +98,12 @@ public class MainActivity extends AppCompatActivity {
                     skOne.setProgress(0);
                     skTwo.setProgress(0);
                     skThree.setProgress(0);
-
-                    ibtnPlay.setVisibility(View.INVISIBLE);
-                    countDownTimer.start();
+                    if (soDiem > 0) {
+                        ibtnPlay.setVisibility(View.INVISIBLE);
+                        countDownTimer.start();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Bạn đã hết điểm để chơi", Toast.LENGTH_SHORT).show();
+                    }
 
                     DisableCheckBox();
                 } else {
