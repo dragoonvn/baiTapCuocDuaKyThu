@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/android_nenduongdua1"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkboxThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkboxThree"
+        android:layout_marginBottom="80dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkboxTwo"
+        android:layout_marginBottom="80dp" />
+
+    <SeekBar
+        android:id="@+id/seekbarThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_toRightOf="@+id/checkboxThree"
+        android:thumb="@drawable/android_xe3" />
+
+    <SeekBar
+        android:id="@+id/seekbarTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbarThree"
+        android:layout_marginBottom="95dp"
+        android:layout_toRightOf="@+id/checkboxTwo"
+        android:thumb="@drawable/android_xe2" />
+
+    <SeekBar
+        android:id="@+id/seekbarOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbarTwo"
+        android:layout_marginBottom="95dp"
+        android:layout_toRightOf="@+id/checkboxOne"
+        android:thumb="@drawable/android_xe1" />
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/android_tieude"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+    <TextView
+        android:id="@+id/textviewDiem"
+        android:textColor="#f20"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageButton
+        android:id="@+id/buttonPlay"
+        android:background="@null"
+        android:layout_centerInParent="true"
+        android:src="@drawable/android_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
