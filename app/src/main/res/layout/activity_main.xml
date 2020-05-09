@@ -55,10 +55,11 @@
         android:layout_toRightOf="@+id/checkboxOne"
         android:thumb="@drawable/android_xe1" />
     <ImageView
+        android:id="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:src="@drawable/android_tieude"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"/>
+        android:layout_height="150dp"/>
     <TextView
         android:id="@+id/textviewDiem"
         android:textColor="#f20"
@@ -68,10 +69,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <ImageButton
-        android:id="@+id/buttonPlay"
         android:background="@null"
-        android:layout_centerInParent="true"
+        android:id="@+id/imgbuttonPlay"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView1"
         android:src="@drawable/android_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
 </RelativeLayout>
